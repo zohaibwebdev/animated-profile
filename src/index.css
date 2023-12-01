@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+
+  background: linear-gradient(to bottom right,gray, cyan);
+}
+.app{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  font-weight: bold;
+  font-size: 32px;
+}
