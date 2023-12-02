@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+body {
+  color: lightgray;
+  background-color: #0c0c1d;
+}
+section {
+  scroll-snap-align: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
