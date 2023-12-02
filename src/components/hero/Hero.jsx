@@ -1,7 +1,7 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
 
-const variants = {
+const textVariants = {
   initial: {
     x: -500,
     opacity: 0,
@@ -23,7 +23,6 @@ const variants = {
     },
   },
 };
-
 const sliderVariants = {
   initial: {
     x: 0,
@@ -32,7 +31,7 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType: mirror,
+      repeatType: "mirror",
       duration: 20,
     },
   },
@@ -40,42 +39,44 @@ const sliderVariants = {
 
 const Hero = () => {
   return (
-    <motion.div className="hero">
-      <motion.div className="wrapper">
+    <div className="hero">
+      <div className="wrapper">
         <motion.div
           className="textContainer"
-          variants={variants}
+          variants={textVariants}
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={variants}>Zohaib Hassan</motion.h2>
-          <motion.h1 variants={variants}>
-            Web Developer and UI/UX Designer
+          <motion.h2 variants={textVariants}>ZOHAIB HASSAN</motion.h2>
+          <motion.h1 variants={textVariants}>
+            Web developer and UI designer
           </motion.h1>
-          <motion.div className="buttons" variants={variants}>
-            <button>See Latest Works</button>
-            <button>Contact Me</button>
+          <motion.div variants={textVariants} className="buttons">
+            <motion.button variants={textVariants}>
+              See the Latest Works
+            </motion.button>
+            <motion.button variants={textVariants}>Contact Me</motion.button>
           </motion.div>
           <motion.img
-            variants={variants}
+            variants={textVariants}
             animate="scrollButton"
             src="/scroll.png"
-            alt="scroll"
+            alt=""
           />
         </motion.div>
-      </motion.div>
+      </div>
       <motion.div
+        className="slidingTextContainer"
         variants={sliderVariants}
         initial="initial"
         animate="animate"
-        className="slideText"
       >
-        WEB DEVELOPER WEB DESIGNER WEBSITE BUILDER
+        Web Developer Web Designer Custom Code
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt="zohaib" />
+        <img src="/hero.png" alt="" />
       </div>
-    </motion.div>
+    </div>
   );
 };
 
